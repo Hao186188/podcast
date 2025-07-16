@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yêu em</title>
+    <title>Nhật Hào</title>
     <style>
         body {
             margin: 0;
@@ -204,10 +204,14 @@
 
     <audio id="audio" autoplay loop>
         <!-- <source src="./phonecert.m4a" type="audio/mp3"> -->
-         <source src="./SnapTikdotKim.m4a" type="audio/mp3">
+         <!-- <source src="./SnapTikdotKim.m4a" type="audio/mp3"> -->
+          <source src="./snapkim.mp3" type="audio/mp3">
     </audio>
 
     <script>
+        document.body.addEventListener('click', () => {
+        audioElement.play().catch(err => console.log("Can't autoplay:", err));
+        }, { once: true });
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
